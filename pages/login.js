@@ -13,19 +13,9 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-function Copyright(props) {
-    return (
-        <Typography variant="body2" color="text.secondary" align="center" {...props}>
-            <Link color="inherit" href="/">
-                Your Website
-            </Link>{' '}
-            {new Date().getFullYear()}
-            {'.'}
-        </Typography>
-    );
-}
-
 const theme = createTheme();
+
+const backgroundImage = '/images/sidebg.jpg'
 
 export default function Login() {
     const handleSubmit = (event) => {
@@ -48,12 +38,12 @@ export default function Login() {
                     sm={4}
                     md={7}
                     sx={{
-                        backgroundImage: 'url(https://source.unsplash.com/random)',
+                        backgroundImage: `url(${backgroundImage})`,
                         backgroundRepeat: 'no-repeat',
                         backgroundColor: (t) =>
                             t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
                         backgroundSize: 'cover',
-                        backgroundPosition: 'center',
+                        backgroundPosition: 'right',
                     }}
                 />
                 <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
@@ -66,7 +56,7 @@ export default function Login() {
                             alignItems: 'center',
                         }}
                     >
-                        <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+                        <Avatar sx={{ m: 1, bgcolor: 'primary.dark' }}>
                             <LockOutlinedIcon />
                         </Avatar>
                         <Typography component="h1" variant="h5">
@@ -100,8 +90,12 @@ export default function Login() {
                             <Button
                                 type="submit"
                                 fullWidth
-                                variant="contained"
-                                sx={{ mt: 3, mb: 2 }}
+                                variant="outlined"
+                                color="primary"
+                                sx={{ mt: 3, mb: 2, color: "primary",
+                                    '&:hover': {
+                                        bgcolor: 'primary',
+                                    },}}
                             >
                                 Sign In
                             </Button>
@@ -117,7 +111,6 @@ export default function Login() {
                                     </Link>
                                 </Grid>
                             </Grid>
-                            <Copyright sx={{ mt: 5 }} />
                         </Box>
                     </Box>
                 </Grid>

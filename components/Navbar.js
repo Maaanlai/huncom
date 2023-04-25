@@ -11,7 +11,7 @@ import LogoDevIcon from "@mui/icons-material/LogoDev";
 import { Shadows } from "@mui/material";
 import Link from 'next/link'
 
-const pages = ["Instruments", "Institutions"]
+const pages = ["Instruments", "Institutions", "Teachers"]
 const settings = ["Login"]
 
 const theme = createTheme({
@@ -134,6 +134,15 @@ function Navbar() {
                             sx={{ my: 2, color: "white", display: "block" }}
                         >
                             Institutions
+                        </Button>
+
+                        <Button
+                            key="Teachers"
+                            onClick={handleCloseNavMenu}
+                            href="/teachers"
+                            sx={{ my: 2, color: "white", display: "block" }}
+                        >
+                            Teachers
                         </Button>
 
                     </Box>

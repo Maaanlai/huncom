@@ -36,32 +36,34 @@ export default function ProductHeroLayout(
 ) {
     const { sxBackground, children } = props;
 
+    // @ts-ignore
     return (
-        <ProductHeroLayoutRoot>
-            <Container
-                sx={{
-                    mt: 3,
-                    mb: 14,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                }}
-            >
-                {children}
-                <Box
+        <div>
+            <ProductHeroLayoutRoot>
+                <Container
                     sx={{
-                        position: 'absolute',
-                        left: 0,
-                        right: 0,
-                        top: 0,
-                        bottom: 0,
-                        backgroundColor: 'common.black',
-                        opacity: 0.5,
-                        zIndex: -1,
+                        mt: 3,
+                        mb: 14,
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
                     }}
-                />
-                <Background sx={sxBackground} />
-                {/* <Box
+                >
+                    {children}
+                    <Box
+                        sx={{
+                            position: 'absolute',
+                            left: 0,
+                            right: 0,
+                            top: 0,
+                            bottom: 0,
+                            backgroundColor: 'common.black',
+                            opacity: 0.5,
+                            zIndex: -1,
+                        }}
+                    />
+                    <Background sx={sxBackground} />
+                    {/* <Box
                     component="img"
                     src="/static/themes/onepirate/productHeroArrowDown.png"
                     height="16"
@@ -69,7 +71,8 @@ export default function ProductHeroLayout(
                     alt="arrow down"
                     sx={{ position: 'absolute', bottom: 32 }}
                 /> */}
-            </Container>
-        </ProductHeroLayoutRoot>
+                </Container>
+            </ProductHeroLayoutRoot>
+        </div>
     );
 }

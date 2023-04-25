@@ -1,7 +1,7 @@
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
-import Cards from '../components/Cards';
-import CardItem from  '../components/CardItem';
+import CardItem from "@/components/CardItem";
+import Footer from '../components/Footer'
 
 
 async function getTeachers(){
@@ -15,7 +15,8 @@ export default function Home() {
     <div>
       <Navbar />
       <Hero />
-      <Cards />
+      <CardItem />
+        <Footer/>
     </div>
   )
 }

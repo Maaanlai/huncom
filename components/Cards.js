@@ -1,15 +1,30 @@
-import CardItem from "./CardItem";
 import React from "react";
+import Card from "@mui/material/Card";
+import Link from "next/link";
+import CardMedia, {CardActionArea, CardContent, Typography} from "@mui/material";
 
-function Cards() {
-    <div>
-        <h1 color="black">
-            this is the h1 
-        </h1>
-        <CardItem label = "guitar" text = "guitar" image="/images/guitarbg.jpg" path="/register"/>
-    </div>
-    
+export default function Cards(props) {
+    return (
+            <Card sx={{ maxWidth: 345 }}>
+                <CardActionArea>
+                    <CardMedia
+                        component="img"
+                        height="140"
+                        image={props.path}
+                        alt="green iguana"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                            {props.name}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                            {props.title}
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+            </Card>
+        )
+
 }
 
-export default Cards;
 
