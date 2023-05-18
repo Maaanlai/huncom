@@ -5,11 +5,12 @@ import Footer from '../components/Footer'
 
 
 async function getTeachers(){
-  const res = await fetch('http://127.0.0.1:8090/api/collection/teachers/records?page=1&perPage=5');
+  const res = await fetch('http://127.0.0.1:8090/api/collections/teachers/records?page=1&perPage=5');
   const data = await res.json();
-  console.log(data);
-  return data?.asArray();
+  console.log(data)
+  return data;
 }
+
 export default function Home() {
   return (
     <div>
