@@ -10,7 +10,7 @@ import {createTheme, ThemeProvider} from "@mui/material";
 const theme = createTheme({
     palette: {
         primary: {
-            main: '#e3f2fd'
+            main: '#1976d2'
         },
         secondary: {
             main: '#3B82F6'
@@ -62,7 +62,7 @@ export default function Footer() {
     return (
         <Typography
             component="footer"
-            sx={{ display: 'flex', bgcolor: '#3B82F6' }}
+            sx={{ display: 'flex', bgcolor: '#1976d2' }}
         >
             <Container sx={{ my: 8, display: 'flex' }}>
                 <Grid container spacing={5}>

@@ -21,9 +21,14 @@ const theme = createTheme({
         },
         secondary: {
             main: '#3B82F6'
+        },
+        accent:{
+            main: "#d0b390"
         }
     }
 })
+
+const accent = "#d0b390"
 
 function Navbar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -40,7 +45,7 @@ function Navbar() {
 
     return (
         <div>
-        <AppBar position="static" >
+        <AppBar position="fixed" >
             <Container maxWidth="xl" color="primary">
                 <Toolbar disableGutters>
                     <LogoDevIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
@@ -148,7 +153,7 @@ function Navbar() {
                     </Box>
 
                     <Box sx={{ flexGrow: 0 }}>
-                        <Button variant="contained" href="/login">
+                        <Button variant="inline" href="/login">
                             Нэвтрэх
                         </Button>
                     </Box>

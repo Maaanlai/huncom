@@ -11,6 +11,7 @@ function Hero() {
                 backgroundImage: `url(${backgroundImage})`,
                 backgroundColor: '#7fc7d9',
                 backgroundPosition: 'center',
+                marginTop: "70px"
             }}
         >
             <Typography color="inherit" align="center" variant="h2" marked="center">

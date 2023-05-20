@@ -9,7 +9,7 @@ import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
-import Navbar from '../components/Navbar'
+import Navbar from "../components/Navbar";
 
 const drawerWidth = 400;
 
@@ -20,11 +20,11 @@ export default function LeftDrawer() {
                 <Box sx={{ display: 'flex', color: 'black'}}>
                     <CssBaseline />
                     <AppBar
-                        position="fixed"
+                        position="sticky"
                         sx={{ width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px`, color: "primary"}}
                     >
-                        <Navbar/>
                     </AppBar>
+                    <Navbar/>
                     <Drawer
                         PaperProps={{
                             sx: {
